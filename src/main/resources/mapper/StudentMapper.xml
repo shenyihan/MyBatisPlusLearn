@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.boce.mybatis.mapper.StudentMapper">
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, stu_name As stuName,create_time AS createTime
+    </sql>
+
+    <delete id="deleteAll">
+        DELETE FROM tb_student
+    </delete>
+
+    <select id="list" resultType="map">
+        select create_time AS createTime from  tb_student
+    </select>
+</mapper>
